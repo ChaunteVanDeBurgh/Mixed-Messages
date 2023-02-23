@@ -9,6 +9,12 @@ const makeMessage = (noun, verb, adj, adv) => {
     return words[Math.floor(Math.random() * words.length)];
   }
   return `The ${chooseRandomWord(adj)} ${chooseRandomWord(noun)} ${chooseRandomWord(verb)} ${chooseRandomWord(adv)}.`;
-}
+};
 
-console.log(makeMessage(noun, verb, adj, adv));
+const makeThirtyMessages = () => {
+  for (let i = 0; i <= 30; i++) {
+    console.log(makeMessage(noun, verb, adj, adv));
+  }
+};
+
+makeThirtyMessages();
